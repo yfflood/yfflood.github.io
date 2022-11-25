@@ -8,6 +8,8 @@ redirect_from:
   - /about.html
 ---
 
+I am currently an undergraduate at Tsinghua University. My research interest is mainly focuesed on computational models of human cognition and behaviour, and decision making under risk and uncertainty.
+
 # Education
 
 - B.S. in Industrial Engineering, Tsinghua University, 2023
