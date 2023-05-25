@@ -10,6 +10,6 @@ citation: 'Yifan Hong, Chen Wang. (2023). A Rational Model of Dimension-reduced 
 ---
 A rational analysis of human categorization with simultaneous learning of key features.
 
-[Download paper here]([http://academicpages.github.io/files/paper1.pdf](https://arxiv.org/abs/2305.14383))
+[Download paper here](http://academicpages.github.io/files/arxiv-preprint-2305.14383.pdf)
 
 Recommended citation: Yifan Hong, Chen Wang. (2023). A Rational Model of Dimension-reduced Human Categorization; <i>arXiv preprint arXiv:2305.14383</i>.
