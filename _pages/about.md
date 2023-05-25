@@ -17,4 +17,7 @@ I am currently an undergraduate at Tsinghua University. My research interest is 
 
 # Publications
 
+Hong, Y., Wang, C. (2023). A Rational Model of Dimension-reduced Human Categorization. arXiv preprint arXiv:2305.14383.
+
+
 # Work Experience
