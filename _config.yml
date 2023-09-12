@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Yifan Hong"
 title_separator          : "-"
 name                     : &name "hyf"
-description              : &description "undergraduate at Tsinghua University"
+description              : &description "graduate student at Tsinghua University"
 url                      : "https://YifanHongTHU.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "YifanHongTHU.github.io" # "academicpages/academicpages.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Yifan Hong"
   avatar           : "E.png"
-  bio              : "Undergraduate @THU"
+  bio              : "PhD student @THU"
   location         : "Beijing, China"
   employer         :
   pubmed           : 
   googlescholar    : 
-  email            : "hongyf19@mails.tsinghua.edu.cn"
+  email            : "hongyf23@mails.tsinghua.edu.cn"
   researchgate     : "https://www.researchgate.net/profile/Yifan-Hong-4"
   uri              :
   bitbucket        :
