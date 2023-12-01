@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/evanflood"
+  github           : "https://github.com/yfflood"
   google_plus      :
   keybase          :
   instagram        :
@@ -186,7 +186,7 @@ collections:
     output: false
     permalink: /:collection/:path/
   talks:
-    output: false
+    output: true
     permalink: /:collection/:path/
 
 
