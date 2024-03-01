@@ -1,3 +1,14 @@
+---
+title: 'MidiNet: a Convolutional Generative Adversarial Network for Symbolic-Domain Music Generation'
+date: 2023-01-01
+permalink: /posts/midinet/
+tags:
+  - music
+  - category1
+  - category2
+---
+
+
 # MidiNet: a Convolutional Generative Adversarial Network for Symbolic-Domain Music Generation
 
 原文： https://arxiv.org/pdf/1703.10847v2.pdf
