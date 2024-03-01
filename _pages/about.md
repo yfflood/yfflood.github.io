@@ -8,11 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am currently an PhD student at Department of Industrial Engineering, Tsinghua University. My research interest is mainly focuesed on decision making under risk and uncertainty, and also computational models of other aspects of human cognition and behaviour. I'm also enthusiastic about algorithmic music composition (AIGC, etc.).
+I am a PhD student at the department of industrial engineering, Tsinghua University. I received my B.S. in industrial engineering from Tsinghua University in 2023.
 
-# Education
-
-- B.S. in Industrial Engineering, Tsinghua University, 2023
+My research is mainly focuesed on decision-making, with an interest in both normative theory and descriptive models. Generally speaking, I work on computational models of human cognition & behaviour. I'm also enthusiastic about algorithmic music composition (AIGC, etc.).
 
 # Papers
 
@@ -20,5 +18,3 @@ Hong, Y., Wang, C. (2023). A Rational Model of Dimension-reduced Human Categoriz
 
 # Talks 
 **Decision-Making as Categorization**, Oral presentation at 2023 INFORMS Annual Meeting
-
-# Work Experience
