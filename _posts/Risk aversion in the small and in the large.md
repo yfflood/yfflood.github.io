@@ -1,0 +1,98 @@
+---
+title: "[Paper Note] Risk aversion in the small and in the large"
+date: 2024-03-06
+permalink: /posts/2024/03/06/pratt64eca/
+tags:
+  - utility-theory
+---
+
+> Pratt, John W. "Risk Aversion in the Small and in the Large." _Econometrica_ 32.1/2 (1964): 122-136.
+
+For the utility functions for money, a ***local*** *risk measure* is defined.  (equation (3))
+- The *risk premium* can be **locally** represented using the *local risk aversion*. (equation (2)) 
+- This measure is closely related to ***global*** risk-averse preferences.
+
+# Definitions and notations
+- $u_{1}(x)\sim u_{2}(x)$: two functions are equivalent as utilities (up to increasing linear transformation)
+- $\pi_{x,\tilde{z}}$: the risk premium (elaborated below)
+## The **risk premium** $\pi$
+Given assets $x$ and utility function $u$, a decision maker is *indifferent* between receiving a risk $\tilde{z}$ and the non-random amount $E[\tilde{z}]-\pi$.  Mathematically,
+$$
+u(x+E(\tilde{z})-\pi(x,\tilde{z}))=E[u(x+\tilde{z})].\tag{1}
+$$
+- From equation (1) the risk premium is uniquely defined. 
+- It follows from (1) that for any constant $\mu$, $\pi(x,\tilde{z})=\pi(x+\mu,\tilde{z}-\mu)$. Therefore, we may only consider any *actuarially neutral* risk.
+
+There are other related concepts like the *cash equivalent* and *insurance premium*.
+These concepts should be distinguished from the *bid price*.
+
+---
+# Local risk aversion
+Consider $\pi(x,\tilde{z})$ for an actuarially neutral risk $\tilde{z}$ with infinitesimal variance $\sigma_z^2{\rightarrow}0$. Locally expand equation (1) on both sides shows
+$$
+\begin{equation}
+\begin{split}
+u(x-\pi)&=u(x)-\pi u'(x) + O(\pi^2)\\
+E[u(x+\tilde{z})]&=E[u(x)+\tilde{z}u'(x)+\frac{1}{2}\tilde{z}^2u''(x)+O(\tilde{z}^3)]\\
+&=u(x)+\frac{1}{2}\sigma_z^2u''(x)+o(\sigma_z^2)
+\end{split}
+\end{equation}
+$$
+Setting equal these equations gives
+$$
+\pi(x,\tilde{z})=\frac{1}{2}\sigma_z^{2}r(x)+ o(\sigma_z^2),\tag{2}
+$$
+where 
+$$
+r(x)=-\frac{u''(x)}{u(x)}=-\frac{d}{dx}\log u'(x). \tag{3}
+$$
+- There is a similar interpretation with discrete risks and *probability premium* $p(x,h)=p(\tilde{z}=h)-p(\tilde{z}=-h)$.
+
+## Relation with utility function
+> The local risk aversion function $r$ associated with any **utility** function $u$ contains **all** essntial information about $u$.
+
+Equation (3) implies
+$$u\sim\int e^{-\int r} \tag{4}$$
+- It can be convenient to preserve $u$ since it determines *ordinary* (as against infinitesimal) risk preferences.
+
+## Concavity
+$u''(x)$ is **not** in itself a meaningful measure of *concavity* in utility theory
+- the sign of $u''(x)$ implies general attitude towards risk
+- the absolute magnitude is not meaningful
+
+
+# Comparative (global) risk aversion
+If $r_1(x)>r_2(x)$, then $u_1$ is more risk-averse than $u_2$ at $x$ not only locally, but also globally. 
+**Thm.** Let $r_i(x),\pi_i(x)$ be the local risk aversion and risk premium according to the utility function $u_i,\,i=1,2$. Then the following conditions are equivalent:
+1. $r_{1}(x)\geq r_2(x)$ for all $x$
+2. $\pi_1(x,\tilde{z})\geq \pi_2(x,\tilde{z})$ for all $x$ and $\tilde{z}$
+3. $u_1(u_2^{-1}(t))$ is a concave function of $t$
+4. $\frac{u_1(y)-u_1(x)}{u_1(w)-u_{1(v)}} \leq \frac{u_2(y)-u_2(x)}{u_2(w)-u_2(v)}$ for all $v<w\leq x<y$.
+
+- condition 1. requires local risk-aversion to be larger for any asset.
+---
+
+# Special family of risk aversion
+## *Constant* risk aversion
+If the local risk aversion is constant $r(x)=c$, then
+$$
+u(x)\sim x\quad\text{if } r(x)=0
+$$
+$$
+u(x)\sim -e^{-cx} \quad\text{if } r(x)=c>0
+$$
+$$
+u(x)\sim e^{-cx} \quad\text{if } r(x)=c<0
+$$
+- If the risk aversion is constant locally, then it is also constant globally.
+For any $k,\,u(x+k)\sim u(x)$.
+
+## Decreasing risk aversion
+
+**Decreasing risk aversion** describes a decision maker, who (1) attaches positive risk premium (***risk-averse***) to any risk, but (2) attaches smaller risk premium the greater his assets $x$. Formally,
+1. $\pi(x,\tilde{z})>0$ for all $x$ and $\tilde{z}$
+2. $\pi(x,\tilde{z})$ is a **strictly decreasing** function of $x$ for all (given) $\tilde{z}$
+
+Decreasing **global** risk aversion is equivalent to decreasing **local** risk aversion,i.e. the following conditions are *equivalent*
+1. The local risk aversion $r(x)$ is decreasing
+2. The risk premium $\pi(x,\tilde{z})$ is a decreasing function of $x$ for all $\tilde{z}$
