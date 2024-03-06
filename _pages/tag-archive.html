@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
-<a href="/year-archive/" style="color: DarkTurquoise; text-decoration: none; font-weight: bold;"> Posts by Time</a>
+<a href="/year-archive/" style="color: DarkSlateBlue; text-decoration: none; font-weight: bold;"> Posts by Time</a>
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
