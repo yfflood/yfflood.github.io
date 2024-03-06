@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /year-archive/
-title: "Blog posts"
+title: "Post by Time"
 author_profile: true
 redirect_from:
   - /wordpress/blog-posts/
@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
-<a href="/tags/" style="color: blue; text-decoration: none; font-weight: bold;">Posts by Tags</a>
+<p>Posts by </p><a href="/tags/" style="color: lavender; text-decoration: none; font-weight: normal;">Tags</a>
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
