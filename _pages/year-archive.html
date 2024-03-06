@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
-<a href="/tags/" style="color: Teal; text-decoration: none; font-weight: bold;"> Posts by Tags</a>
+<a href="/tags/" style="color: Turquoise; text-decoration: none; font-weight: bold;"> Posts by Tags</a>
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
