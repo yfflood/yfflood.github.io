@@ -25,7 +25,7 @@ The *cumulative Bayes risk* under $\psi$ is the expectation w.r.t. the *prior* o
 $$\text{Risk}(T,\psi)=E[\text{Regret}(Z,T,\psi)]$$
 ---
 
-![regret table](Pasted image 20240307221236.png)
+![regret table](/images/Pasted image 20240307221236.png)
 
 # Lower bounds
 Linear bandits has $\Omega(r\sqrt{T})$ lower bounds on the Bayes risk and thus on regret, given normal prior on $Z$.
@@ -39,6 +39,7 @@ Linear bandits has $\Omega(r\sqrt{T})$ lower bounds on the Bayes risk and thus o
 	where $r$ is prior precision of $Z$.
 3. There is a lower bound on the probability that $Z$ is bounded away from 0.
 4. Then we can derive a *minimum directional risk*.
+
 # Upper bounds: PEGE algorithm
 
 ## Algorithm: phased-exploration-and-exploitation
@@ -61,6 +62,7 @@ $$\text{Regret}(z,T,\text{PEGE})\leq a_{1}(||z||+\frac{1}{||z||})r\sqrt{T}$$
 - Since the arm bound provides a trivial bound $2\bar{u}||z||$ on *instantaneous regret*, the bound does not deteriorate as $||z||$ approaches 0.
 1. There is an upper bound on the squared norm error
 		$$E[||\hat{Z}(c)-z||^{2}| Z=z]\leq \frac{h_{1}r}{c}$$
+
 2. Expected **instantaneous regret** under greedy decision is of order $O(||Z-\hat{Z}||^2)$ given **smoothness** assumption.
 3. Over total $K$ cycles, $K=O(\sqrt{T})$
 		$$\text{Regret}\left(z,rK+\sum\limits_{c=1}^{K}c,\text{PEGE}\right)\leq h_{3}r||z||K+h_{4}\sum\limits_{c=1}^{K} \frac{r}{||z||}$$
