@@ -63,6 +63,6 @@ $$\text{Regret}(z,T,\text{PEGE})\leq a_{1}(||z||+\frac{1}{||z||})r\sqrt{T}$$
 Proof sketch:
 1. There is an upper bound on the squared norm error
 		$$E[||\hat{Z}(c)-z||^{2}| Z=z]\leq \frac{h_{1}r}{c}$$
-2. Expected **instantaneous regret** under greedy decision is of order $O(||Z-\hat{Z}||^2)$ given **smoothness** assumption.
+2. Expected **instantaneous regret** under greedy decision is of order $O(||Z-\hat{Z}||^{2})$ given **smoothness** assumption.
 3. Over total $K$ cycles, $K=O(\sqrt{T})$
 		$$\text{Regret}\left(z,rK+\sum\limits_{c=1}^{K}c,\text{PEGE}\right)\leq h_{3}r||z||K+h_{4}\sum\limits_{c=1}^{K} \frac{r}{||z||}$$
