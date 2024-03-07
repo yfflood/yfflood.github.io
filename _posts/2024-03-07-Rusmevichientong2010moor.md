@@ -30,14 +30,15 @@ $$\text{Risk}(T,\psi)=E[\text{Regret}(Z,T,\psi)]$$
 Linear bandits has $\Omega(r\sqrt{T})$ lower bounds on the Bayes risk and thus on regret, given normal prior on $Z$.
 1. The cumulative risk can be lower-bounded by the **estimator error variance** and the **total amount of exploration**.
 	
- 	**Lemma** (risk decomposition) Let $S_{t}^{1},..., S_{t}^{r-1}$ denote a collection of orthogonal unit vectors that are also orthogonal to $\hat{Z}$. For any $T\geq 1$, 
-	$$\text{Risk}(T,\psi)\geq \frac{1}{2}\sum\limits_{k=1}^{T}E \bigg[||Z||\sum\limits_{t=1}^{T}(T_{t}^{T}S_{t}^{k})^{2} + \frac{T}{||Z||} \{(Z-\hat{Z}_{T})^{T}S_{T}^{k}\}^2\bigg]$$
+ **Lemma** (risk decomposition) Let $S_{t}^{1},..., S_{t}^{r-1}$ denote a collection of orthogonal unit vectors that are also orthogonal to $\hat{Z}$. For any $T\geq 1$, 
+$$\text{Risk}(T,\psi)\geq \frac{1}{2}\sum\limits_{k=1}^{T}E \bigg[||Z||\sum\limits_{t=1}^{T}(T_{t}^{T}S_{t}^{k})^{2} + \frac{T}{||Z||} \{(Z-\hat{Z}_{T})^{T}S_{T}^{k}\}^2\bigg]$$
 
 2. The two terms are interelated. Little exploration implies large estimation error
 	
- 	**Lemma** For any $k$ and $T\geq 1$,
-	$$E[\{(Z-\hat{Z})^{T}S_{T}^{k}\}^{2}\vert H_{T}]\geq\frac{1}{r+\sum\limits_{t=1}^{T}(T_{t}^{T}S_{t}^{k})^{2} },$$
-	where $r$ is prior precision of $Z$.
+ **Lemma** For any $k$ and $T\geq 1$,
+$$E[\{(Z-\hat{Z})^{T}S_{T}^{k}\}^{2}\vert H_{T}]\geq\frac{1}{r+\sum\limits_{t=1}^{T}(T_{t}^{T}S_{t}^{k})^{2} },$$
+where $r$ is prior precision of $Z$.
+
 3. There is a lower bound on the probability that $Z$ is bounded away from 0.
 4. Then we can derive a *minimum directional risk*.
 
