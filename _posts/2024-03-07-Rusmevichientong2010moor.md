@@ -59,6 +59,7 @@ In the algorithm, $c$ is of the **order $O(\sqrt{T})$**.
 **Thm.** There exists a positive constant $a_{1}$ that depends only on the noise bounds, arm bounds and response bounds, such that for any $z$ and $T\geq r$,
 $$\text{Regret}(z,T,\text{PEGE})\leq a_{1}(||z||+\frac{1}{||z||})r\sqrt{T}$$
 - Since the arm bound provides a trivial bound $2\bar{u}||z||$ on *instantaneous regret*, the bound does not deteriorate as $||z||$ approaches 0.
+
 Proof sketch:
 1. There is an upper bound on the squared norm error
 		$$E[||\hat{Z}(c)-z||^{2}| Z=z]\leq \frac{h_{1}r}{c}$$
