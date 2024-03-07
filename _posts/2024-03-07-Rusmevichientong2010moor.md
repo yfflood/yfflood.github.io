@@ -25,7 +25,7 @@ The *cumulative Bayes risk* under $\psi$ is the expectation w.r.t. the *prior* o
 $$\text{Risk}(T,\psi)=E[\text{Regret}(Z,T,\psi)]$$
 ---
 
-![[Pasted image 20240307221236.png]]
+![regret table](Pasted image 20240307221236.png)
 
 # Lower bounds
 Linear bandits has $\Omega(r\sqrt{T})$ lower bounds on the Bayes risk and thus on regret, given normal prior on $Z$.
