@@ -5,6 +5,9 @@ permalink: /posts/2024/03/07/rusmevichientong2010moor/
 tags:
   - bandits
 ---
+
+> Rusmevichientong, P., & Tsitsiklis, J. N. (2010). Linearly parameterized bandits. Mathematics of Operations Research, 35(2), 395-411.
+
 The key ideas for finding bounds is to
 - attribute *regret* to the causes: *exploration* or *estimation error*
 - find the relation between these two parts, if any
