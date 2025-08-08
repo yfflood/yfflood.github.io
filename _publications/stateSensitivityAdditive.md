@@ -5,7 +5,7 @@ permalink: /publication/additiveDiscoveryGame1
 excerpt: 'TL;DR: We find human strategies deviates from the optimal policies for the additive discovery game, e.g., explore excessively.'
 date: 2025-02-04
 venue: 'preprint'
-paperurl: 'https://doi.org/10.31234/osf.io/vg6ut_v1'
+paperurl: 'https://escholarship.org/uc/item/31c2r0js'
 citation: 'Hong, Y., Wang, C., & Zhao, B. (2025). State Sensitivity in an Additive Discovery Game. https://doi.org/10.31234/osf.io/vg6ut_v1'
 ---
 
