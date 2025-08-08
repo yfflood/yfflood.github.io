@@ -2,7 +2,7 @@
 title: "A Rational Model of Dimension-reduced Human Categorization"
 collection: publications
 permalink: /publication/HIM_PPCA
-excerpt: 'TL;DR: A rational analysis of human categorization with simultaneous learning of low-dimensional local features.'
+excerpt: 'A rational analysis of human categorization with simultaneous learning of low-dimensional local features.'
 date: 2025-02-04
 venue: 'CogSci'
 paperurl: 'https://escholarship.org/uc/item/17z1w2g9'
