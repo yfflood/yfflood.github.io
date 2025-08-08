@@ -5,7 +5,7 @@ permalink: /publication/HIM_PPCA
 excerpt: 'TL;DR: A rational analysis of human categorization with simultaneous learning of low-dimensional local features.'
 date: 2023-05-23
 venue: 'preprint'
-paperurl: 'https://arxiv.org/abs/2305.14383'
+paperurl: 'https://escholarship.org/uc/item/17z1w2g9'
 citation: 'Yifan Hong, Chen Wang. (2023). A Rational Model of Dimension-reduced Human Categorization; <i>arXiv preprint arXiv:2305.14383</i>.'
 ---
 
