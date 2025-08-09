@@ -1,13 +1,24 @@
 ---
 layout: archive
 permalink: /tags/
-title: "Posts by Tags"
+title: "Blog Posts"
 author_profile: true
 ---
 
 {% include base_path %}
+
+<div class="archive-nav">
+  <div class="archive-nav__container">
+    <a href="/year-archive/" class="archive-nav__button archive-nav__button--time">
+      <i class="fa fa-calendar" aria-hidden="true"></i> Posts by Time
+    </a>
+    <a href="/tags/" class="archive-nav__button archive-nav__button--tags archive-nav__button--active">
+      <i class="fa fa-tags" aria-hidden="true"></i> Posts by Tags
+    </a>
+  </div>
+</div>
+
 {% include group-by-array collection=site.posts field="tags" %}
-<a href="/year-archive/" style="color: Maroon; text-decoration: none; font-weight: bold;"> Posts by Time</a>
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}

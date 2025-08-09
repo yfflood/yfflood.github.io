@@ -109,6 +109,103 @@
 
 
 /*
+   Archive Navigation
+   ========================================================================== */
+
+.archive-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em 0 2em 0;
+  gap: 0;
+  
+  @include breakpoint($small) {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  @include breakpoint($medium) {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.archive-nav__container {
+  display: flex;
+  background: $lighter-gray;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid $border-color;
+}
+
+.archive-nav__button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  color: $text-color;
+  background: transparent;
+  border: none;
+  border-right: 1px solid $border-color;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 120px;
+  
+  &:last-child {
+    border-right: none;
+  }
+  
+  &:hover {
+    background: mix($primary-color, $lighter-gray, 15%);
+    color: $dark-gray;
+    text-decoration: none;
+  }
+  
+  &--active {
+    background: $primary-color;
+    color: #fff;
+    font-weight: bold;
+    
+    &:hover {
+      background: mix(#000, $primary-color, 10%);
+      color: #fff;
+    }
+  }
+  
+  &--time {
+    &.archive-nav__button--active {
+      background: $info-color;
+      
+      &:hover {
+        background: mix(#000, $info-color, 15%);
+      }
+    }
+  }
+  
+  &--tags {
+    &.archive-nav__button--active {
+      background: $success-color;
+      
+      &:hover {
+        background: mix(#000, $success-color, 15%);
+      }
+    }
+  }
+}
+
+.archive-nav__title {
+  font-size: $type-size-4;
+  font-weight: 600;
+  margin: 0 0 1.5em 0;
+  text-align: center;
+  color: $dark-gray;
+}
+
+/*
    Grid view
    ========================================================================== */
 
