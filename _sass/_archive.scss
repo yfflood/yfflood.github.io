@@ -188,10 +188,10 @@
   
   &--tags {
     &.archive-nav__button--active {
-      background: $success-color;
+      background: $info-color;
       
       &:hover {
-        background: mix(#000, $success-color, 15%);
+        background: mix(#000, $info-color, 15%);
       }
     }
   }
