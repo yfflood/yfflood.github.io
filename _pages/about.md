@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student at the department of industrial engineering, Tsinghua University. I received my B.E. in industrial engineering from Tsinghua University in 2023.
+I am a PhD student at the department of industrial engineering, Tsinghua University. Currently, I'm visiting [Huiwen Jia's lab](https://huiwen-j.github.io/) at UC Berkeley. I received my B.E. in industrial engineering from Tsinghua University in 2023.
 
 I study decision-making with an ambition to connect normative theories with descriptive behavioral models. Current investigations include:
 - **Resource-Rational Analysis** of human cognition, with emphasis on behavioral decision making
