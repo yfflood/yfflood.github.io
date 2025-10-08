@@ -11,3 +11,5 @@ citation: 'Hong, Y., Wang, C. (2025). Proceedings of the Annual Meeting of the C
 ---
 
 Existing models in cognitive science typically assume human categorization as graded generalization behavior in a multidimensional psychological space. However, category representations in these models may suffer from the curse of dimensionality in a natural setting. People generally rely on a tractable yet sufficient set of features to understand the complex environment. We propose a rational model of categorization based on a hierarchical mixture of probabilistic principal components, that simultaneously learn category representations and an economical collection of features. The model captures dimensional biases in human categorization and supports zero-shot learning. We further exploit a generative process within a low-dimensional latent space to provide a better account of categorization with high-dimensional stimuli. We validate the model with simulation and behavioral experiments.
+
+Download: https://escholarship.org/content/qt17z1w2g9/qt17z1w2g9.pdf
