@@ -35,7 +35,7 @@
     </h2>
 
     {% if post.collection == 'publications' and post.authors %}
-      <p class="archive__item-authors" style="margin-top: 0.5em; margin-bottom: 1em; font-style: italic; color: #666;">{{ post.authors }}</p>
+      <p class="archive__item-authors">{{ post.authors }}</p>
     {% endif %}
     
     {% if post.read_time %}

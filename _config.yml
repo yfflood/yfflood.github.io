@@ -152,6 +152,8 @@ exclude:
   - tmp
   - vendor
   - _pages/portfolio.html
+  - nul
+  - "**/nul"
 keep_files:
   - .git
   - .svn

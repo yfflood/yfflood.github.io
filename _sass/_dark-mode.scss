@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Dark Mode
+   CSS Custom Properties for theme switching
+   ========================================================================== */
+
+:root {
+  /* Light theme colors (default) */
+  --color-background: #fff;
+  --color-background-alt: #fafafa;
+  --color-text: #494e52;
+  --color-text-muted: #7a8288;
+  --color-text-light: #bcbdbe;
+  --color-link: #52adc8;
+  --color-link-hover: #3d8294;
+  --color-border: #f2f3f3;
+  --color-border-dark: #bcc0c4;
+  --color-code-bg: #fafafa;
+  --color-footer-bg: #e9ecef;
+  --color-footer-border: #bcc0c4;
+  --color-nav-bg: #fff;
+  --color-nav-dropdown-bg: #fff;
+  --color-toc-bg: #fff;
+  --color-masthead-link: #7a8288;
+  --color-masthead-link-hover: #5b6064;
+  --color-primary: #7a8288;
+  --color-primary-light: #bcbdbe;
+  --color-button-bg: #7a8288;
+  --color-comments-bg: #e9ecef;
+
+  /* Syntax highlighting - Solarized Light */
+  --syntax-bg: #fafafa;
+  --syntax-text: #586e75;
+  --syntax-comment: #93a1a1;
+  --syntax-keyword: #859900;
+  --syntax-string: #2aa198;
+  --syntax-number: #2aa198;
+  --syntax-operator: #859900;
+  --syntax-function: #22b3eb;
+  --syntax-class: #22b3eb;
+  --syntax-constant: #cb4b16;
+  --syntax-error: #dc322f;
+  --syntax-tag: #22b3eb;
+  --syntax-attribute: #586e75;
+  --syntax-builtin: #B58900;
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors */
+  --color-background: #1a1a2e;
+  --color-background-alt: #16213e;
+  --color-text: #e4e4e7;
+  --color-text-muted: #a1a1aa;
+  --color-text-light: #71717a;
+  --color-link: #67d4f1;
+  --color-link-hover: #9be5ff;
+  --color-border: #2d3748;
+  --color-border-dark: #4a5568;
+  --color-code-bg: #1e293b;
+  --color-footer-bg: #0f172a;
+  --color-footer-border: #2d3748;
+  --color-nav-bg: #1a1a2e;
+  --color-nav-dropdown-bg: #16213e;
+  --color-toc-bg: #16213e;
+  --color-masthead-link: #a1a1aa;
+  --color-masthead-link-hover: #e4e4e7;
+  --color-primary: #67d4f1;
+  --color-primary-light: #3d8294;
+  --color-button-bg: #3d8294;
+  --color-comments-bg: #16213e;
+
+  /* Syntax highlighting - Dark theme */
+  --syntax-bg: #1e293b;
+  --syntax-text: #e4e4e7;
+  --syntax-comment: #6b7280;
+  --syntax-keyword: #a3e635;
+  --syntax-string: #5eead4;
+  --syntax-number: #5eead4;
+  --syntax-operator: #a3e635;
+  --syntax-function: #67d4f1;
+  --syntax-class: #67d4f1;
+  --syntax-constant: #fb923c;
+  --syntax-error: #f87171;
+  --syntax-tag: #67d4f1;
+  --syntax-attribute: #e4e4e7;
+  --syntax-builtin: #fbbf24;
+}
+
+/* Theme toggle button styles */
+.greedy-nav a.theme-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 0.5rem !important;
+  margin: 0 1rem;
+  background: transparent !important;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none !important;
+
+  &:before {
+    display: none !important;
+  }
+
+  &:hover {
+    background-color: var(--color-border) !important;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--color-text-muted);
+    transition: stroke 0.2s ease-in-out;
+    display: block;
+  }
+
+  &:hover svg {
+    stroke: var(--color-text);
+  }
+
+  .icon-sun {
+    display: none;
+  }
+
+  .icon-moon {
+    display: block;
+  }
+}
+
+[data-theme="dark"] .theme-toggle {
+  .icon-sun {
+    display: block;
+  }
+
+  .icon-moon {
+    display: none;
+  }
+}
+
+/* Smooth transition for theme switching */
+html,
+body,
+.masthead,
+.greedy-nav,
+.page__footer,
+.toc,
+.greedy-nav .hidden-links,
+.page__comments-form {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
