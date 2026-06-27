@@ -43,6 +43,8 @@ Hong, Y., Wang, C. (2025). A Rational Model of Dimension-reduced Human Categoriz
 
 **LAMDA: Large Language Model as Decision Analyst**, Oral presentation at 2025 INFORMS Annual Meeting
 
+**Decision under Combinatorial Risk**, PhD incubator talk at 2026 INFORMS Advances in Decision Analysis Conference
+
 ---
 
 # Service
