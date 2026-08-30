@@ -45,6 +45,8 @@ Hong, Y., Wang, C. (2025). A Rational Model of Dimension-reduced Human Categoriz
 
 **Decision under Combinatorial Risk**, PhD incubator talk at 2026 INFORMS Advances in Decision Analysis Conference
 
+**Online Irreversible Subset Expansion under Active-Set Market Feedback**, Oral presentation at 2026 INFORMS Revenue Management and Pricing Section Conference
+
 ---
 
 # Service
