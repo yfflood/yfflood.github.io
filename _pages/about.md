@@ -23,8 +23,7 @@ Current investigations include:
 
 Hong, Y., Qin, S., Wang, C. (2026). LAMDA: Large Language Model as Decision Analyst. Accepted to *Decision Analysis*.
 
-Hong, Y., Wang, C., Jia, H. (2026). Online Irreversible Subset Expansion under Choice-based Market Feedback. Working paper.
-
+Hong, Y., Jia, H., & Wang, C. (2026). Learning for Irreversible Subset Expansion: Objective Degeneracy and Thompson Sampling under Information Dilution. Available at SSRN 7496998.
 
 **Descriptive Decision Models**
 
