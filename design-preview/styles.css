@@ -1,0 +1,385 @@
+:root {
+  color-scheme: light;
+  --sans: "Instrument Sans", Arial, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --mono: "IBM Plex Mono", Consolas, monospace;
+  --background: #f8f4ed;
+  --ink: #201e1a;
+  --muted: #5f574f;
+  --line: #cfc4b7;
+  --accent: #813e2d;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4, p, ul {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 2;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  color: #222;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.preview-toolbar {
+  background: #242529;
+  color: #f2f1ed;
+  font: 0.83rem/1.35 var(--sans);
+}
+
+.preview-toolbar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1.2rem;
+  width: min(100% - 2.5rem, 71rem);
+  min-height: 3.5rem;
+  padding-block: 0.5rem;
+  margin-inline: auto;
+}
+
+.preview-label {
+  color: #d0cfca;
+  font-weight: 500;
+}
+
+.preview-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #59585a;
+  border-radius: 0.45rem;
+}
+
+.preview-toolbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.preview-options a {
+  padding: 0.34rem 0.65rem;
+  border-radius: 0.25rem;
+}
+
+.preview-options a[aria-current] {
+  background: #f5f1e9;
+  color: #242529;
+  font-weight: 600;
+}
+
+.preview-options a:hover,
+.preview-back:hover {
+  text-decoration: underline;
+}
+
+.preview-back {
+  margin-inline-start: auto;
+}
+
+.site-header, .site-nav, .site-footer, .profile-contact, .section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.site-header, .site-footer, .section-heading {
+  justify-content: space-between;
+  gap: 0.6rem 1.25rem;
+}
+
+.site-nav, .profile-contact {
+  gap: 0.45rem 1.25rem;
+}
+
+.site-header a, .site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header a:hover, .site-footer a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.profile-contact, .topic-list, .paper-list, .talk-list, .service-list {
+  padding: 0;
+  list-style: none;
+}
+
+.section-link {
+  font-size: 0.875rem;
+}
+
+.paper-year, .talk-year {
+  color: var(--muted);
+  font: 0.8rem/1.6 var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.paper-authors, .paper-venue, .talk-detail p {
+  color: var(--muted);
+}
+
+[data-design="editorial"] {
+  .site-shell {
+    width: min(100% - 3rem, 68rem);
+    margin-inline: auto;
+  }
+
+  .site-header {
+    padding-block: 1.1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-name {
+    font: 1.7rem/1 var(--serif);
+  }
+
+  .site-nav {
+    font-size: 0.9rem;
+  }
+
+  .profile {
+    display: grid;
+    grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(1.75rem, 6vw, 5rem);
+    padding-block: clamp(3rem, 7vw, 6rem);
+  }
+
+  .profile-affiliation {
+    color: var(--accent);
+    font: 500 0.8rem/1.5 var(--mono);
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+  }
+
+  .profile-affiliation span {
+    margin-inline: 0.2rem;
+  }
+
+  h1 {
+    margin-block: 0.45rem 1rem;
+    font: 400 clamp(4rem, 8.5vw, 7rem)/0.9 var(--serif);
+    letter-spacing: -0.025em;
+  }
+
+  .profile-statement {
+    max-width: 25ch;
+    margin-bottom: 1.25rem;
+    font: 400 clamp(1.7rem, 3.5vw, 2.5rem)/1.06 var(--serif);
+  }
+
+  .profile-bio {
+    max-width: 58ch;
+    color: var(--muted);
+  }
+
+  .profile-contact {
+    margin-top: 1.35rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border: 1px solid var(--accent);
+    padding: 0.45rem;
+    object-fit: cover;
+  }
+
+  .section-heading {
+    border-top: 1px solid var(--accent);
+    padding-top: 0.8rem;
+    margin-bottom: 1.45rem;
+  }
+
+  h2 {
+    font: 400 clamp(2.45rem, 5vw, 3.7rem)/1.02 var(--serif);
+  }
+
+  .topics, .papers, .activities {
+    margin-bottom: clamp(3.25rem, 6vw, 5.5rem);
+  }
+
+  .topic-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .topic-list li {
+    border-inline-start: 1px solid var(--line);
+    padding-inline-start: 0.95rem;
+  }
+
+  .topic-list h3 {
+    margin-bottom: 0.25rem;
+    font: 400 clamp(1.35rem, 2.7vw, 1.95rem)/1.1 var(--serif);
+  }
+
+  .topic-list p {
+    max-width: 32ch;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .paper-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.55fr);
+    gap: 0.7rem 2rem;
+    padding-block: 1.15rem 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .paper-group > h3 {
+    color: var(--accent);
+    font: 400 1.55rem/1.13 var(--serif);
+  }
+
+  .paper-list li, .talk-list li {
+    display: grid;
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .paper-list li + li, .talk-list li + li {
+    border-top: 1px solid var(--line);
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .paper-year, .talk-year {
+    margin-top: 0.18rem;
+  }
+
+  .paper-title {
+    font: 400 clamp(1.4rem, 2.6vw, 1.85rem)/1.08 var(--serif);
+  }
+
+  .paper-authors, .paper-venue, .talk-detail p {
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+  }
+
+  .activities {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .talk-detail h3 {
+    font: 400 1.45rem/1.1 var(--serif);
+  }
+
+  .service-list {
+    padding-inline-start: 1.1rem;
+    color: var(--muted);
+    list-style: disc;
+  }
+
+  .service-list li + li {
+    margin-top: 0.65rem;
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--line);
+    padding-block: 1.35rem 2.4rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 46rem) {
+  [data-design="editorial"] {
+    .profile {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .profile-image {
+      width: min(62%, 15rem);
+    }
+
+    .activities {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 34rem) {
+  .preview-toolbar-inner {
+    width: calc(100% - 1.75rem);
+    gap: 0.45rem 0.75rem;
+  }
+
+  .preview-label {
+    width: 100%;
+  }
+
+  [data-design="editorial"] {
+    .site-shell {
+      width: calc(100% - 2rem);
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 15vw, 4.3rem);
+    }
+
+    .topic-list, .paper-group {
+      grid-template-columns: 1fr;
+    }
+
+    .topic-list {
+      gap: 1rem;
+    }
+
+    .paper-list li, .talk-list li {
+      grid-template-columns: 2.4rem minmax(0, 1fr);
+      gap: 0.45rem;
+    }
+  }
+}

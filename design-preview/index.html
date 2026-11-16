@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-design="editorial">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Homepage design concepts · Yifan Hong</title>
+  <script>
+    if (new URLSearchParams(location.search).get('design') === 'research') {
+      document.documentElement.dataset.design = 'research';
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="research.css">
+  <script src="preview.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="preview-toolbar">
+    <div class="preview-toolbar-inner">
+      <span class="preview-label">Homepage concepts</span>
+      <nav class="preview-options" aria-label="Homepage concepts">
+        <a href="?design=editorial" data-preview-design="editorial" aria-current="true">Editorial</a>
+        <a href="?design=research" data-preview-design="research">Research index</a>
+      </nav>
+      <a class="preview-back" href="https://yfflood.github.io/">Current site <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+
+  <div class="site-shell" id="top">
+    <header class="site-header">
+      <a class="site-name" href="#top">Yifan Hong</a>
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="#research">Research</a>
+        <a href="#papers">Papers</a>
+        <a href="#talks">Talks</a>
+        <a href="https://yfflood.github.io/year-archive/">Blog</a>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section class="profile" aria-labelledby="name">
+        <div class="profile-copy">
+          <p class="profile-affiliation">Tsinghua University <span aria-hidden="true">/</span> UC Berkeley</p>
+          <h1 id="name">Yifan Hong</h1>
+          <p class="profile-statement">I study decision-making with an ambition to connect normative theories with descriptive models.</p>
+          <p class="profile-bio">I am a PhD student in industrial engineering at Tsinghua University and currently visiting <a href="https://huiwen-j.github.io/">Prof. Huiwen Jia’s lab</a> at UC Berkeley. I received my B.E. in industrial engineering from Tsinghua University in 2023.</p>
+          <ul class="profile-contact" aria-label="Contact and profiles">
+            <li><a href="mailto:hongyf23@mails.tsinghua.edu.cn">Email</a></li>
+            <li><a href="https://scholar.google.com/citations?user=T4ttja8AAAAJ&amp;hl=zh-CN">Google Scholar</a></li>
+            <li><a href="https://orcid.org/0009-0002-2314-355X">ORCID</a></li>
+            <li><a href="https://github.com/yfflood">GitHub</a></li>
+            <li><a href="https://www.researchgate.net/profile/Yifan-Hong-4">ResearchGate</a></li>
+          </ul>
+        </div>
+        <img class="profile-image" src="../images/E.png" alt="" width="1280" height="1280">
+      </section>
+
+      <section class="topics" id="research" aria-labelledby="research-heading">
+        <div class="section-heading">
+          <h2 id="research-heading">Research interests</h2>
+        </div>
+        <ul class="topic-list">
+          <li>
+            <h3>Sequential Decision Algorithms</h3>
+            <p>Learning and decision-making under incomplete information</p>
+          </li>
+          <li>
+            <h3>Behavioral Models</h3>
+            <p>Human decision-making under risk and uncertainty</p>
+          </li>
+          <li>
+            <h3>Expert Elicitation Methods</h3>
+            <p>Knowledge extraction and aggregation</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="papers" id="papers" aria-labelledby="papers-heading">
+        <div class="section-heading">
+          <h2 id="papers-heading">Selected papers</h2>
+          <a class="section-link" href="https://yfflood.github.io/publications/">Publications archive <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="paper-group">
+          <h3>Normative and Prescriptive Decision Models</h3>
+          <ul class="paper-list">
+            <li>
+              <span class="paper-year">2026</span>
+              <div class="paper-detail">
+                <h4 class="paper-title">LAMDA: Large Language Model as Decision Analyst</h4>
+                <p class="paper-authors">Hong, Y., Qin, S., Wang, C.</p>
+                <p class="paper-venue">Accepted to <cite>Decision Analysis</cite></p>
+              </div>
+            </li>
+            <li>
+              <span class="paper-year">2026</span>
+              <div class="paper-detail">
+                <h4 class="paper-title">Learning for Irreversible Subset Expansion: Objective Degeneracy and Thompson Sampling under Information Dilution</h4>
+                <p class="paper-authors">Hong, Y., Jia, H., &amp; Wang, C.</p>
+                <p class="paper-venue">SSRN 7496998</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="paper-group">
+          <h3>Descriptive Decision Models</h3>
+          <ul class="paper-list">
+            <li>
+              <span class="paper-year">2026</span>
+              <div class="paper-detail">
+                <h4 class="paper-title">Decision-Making under Combinatorial Risk</h4>
+                <p class="paper-authors">Hong, Y., Fan, H., &amp; Wang, C.</p>
+                <p class="paper-venue">arXiv preprint arXiv:2606.10092</p>
+              </div>
+            </li>
+            <li>
+              <span class="paper-year">2025</span>
+              <div class="paper-detail">
+                <h4 class="paper-title">State Sensitivity in an Additive Discovery Game</h4>
+                <p class="paper-authors">Hong, Y., Wang, C., &amp; Zhao, B.</p>
+                <p class="paper-venue"><cite>Proceedings of the Annual Meeting of the Cognitive Science Society</cite>, 47</p>
+              </div>
+            </li>
+            <li>
+              <span class="paper-year">2025</span>
+              <div class="paper-detail">
+                <h4 class="paper-title">A Rational Model of Dimension-reduced Human Categorization</h4>
+                <p class="paper-authors">Hong, Y., Wang, C.</p>
+                <p class="paper-venue"><cite>Proceedings of the Annual Meeting of the Cognitive Science Society</cite>, 47</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="activities">
+        <section class="talks" id="talks" aria-labelledby="talks-heading">
+          <div class="section-heading">
+            <h2 id="talks-heading">Talks</h2>
+            <a class="section-link" href="https://yfflood.github.io/talks/">Talks archive <span aria-hidden="true">↗</span></a>
+          </div>
+          <ul class="talk-list">
+            <li>
+              <span class="talk-year">2026</span>
+              <div class="talk-detail">
+                <h3>Online Irreversible Subset Expansion under Active-Set Market Feedback</h3>
+                <p>Oral presentation · INFORMS Revenue Management and Pricing Section Conference</p>
+              </div>
+            </li>
+            <li>
+              <span class="talk-year">2026</span>
+              <div class="talk-detail">
+                <h3>Decision under Combinatorial Risk</h3>
+                <p>PhD incubator talk · INFORMS Advances in Decision Analysis Conference</p>
+              </div>
+            </li>
+            <li>
+              <span class="talk-year">2025</span>
+              <div class="talk-detail">
+                <h3>LAMDA: Large Language Model as Decision Analyst</h3>
+                <p>Oral presentation · INFORMS Annual Meeting</p>
+              </div>
+            </li>
+            <li>
+              <span class="talk-year">2023</span>
+              <div class="talk-detail">
+                <h3>Decision-Making as Categorization</h3>
+                <p>Oral presentation · INFORMS Annual Meeting</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="service" aria-labelledby="service-heading">
+          <div class="section-heading">
+            <h2 id="service-heading">Service</h2>
+          </div>
+          <ul class="service-list">
+            <li>Reviewer, Annual Meeting of the Cognitive Science Society (CogSci) 2026</li>
+            <li>Reviewer, <cite>Decision Analysis</cite></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>Yifan Hong</span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
+  </div>
+</body>
+</html>
