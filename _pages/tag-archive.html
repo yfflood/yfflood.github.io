@@ -1,29 +1,20 @@
 ---
-layout: archive
+layout: minimalist
 permalink: /tags/
 title: "Blog Posts"
-author_profile: true
 ---
 
-{% include base_path %}
+<header class="blog-header">
+  <h1>{{ page.title | escape }}</h1>
+</header>
+{% include blog-navigation.html %}
 
-<div class="archive-nav">
-  <div class="archive-nav__container">
-    <a href="/year-archive/" class="archive-nav__button archive-nav__button--time">
-      <i class="fa fa-calendar" aria-hidden="true"></i> Posts by Time
-    </a>
-    <a href="/tags/" class="archive-nav__button archive-nav__button--tags archive-nav__button--active">
-      <i class="fa fa-tags" aria-hidden="true"></i> Posts by Tags
-    </a>
-  </div>
-</div>
-
-{% include group-by-array collection=site.posts field="tags" %}
-
-{% for tag in group_names %}
-  {% assign posts = group_items[forloop.index0] %}
-  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
+{% assign tagged_posts = site.tags | sort %}
+{% for group in tagged_posts %}
+{% assign tag = group[0] %}
+{% assign posts = group[1] %}
+<section class="blog-group" aria-labelledby="{{ tag | slugify }}">
+  <h2 id="{{ tag | slugify }}">{{ tag | escape }}</h2>
+  {% include blog-post-list.html posts=posts %}
+</section>
 {% endfor %}

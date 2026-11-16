@@ -1,0 +1,79 @@
+---
+---
+<!doctype html>
+<html lang="{{ site.locale | default: 'en' | slice: 0, 2 }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include seo.html %}
+  {% assign description = page.description | default: page.excerpt | default: site.description %}
+  <meta name="description" content="{{ description | markdownify | strip_html | normalize_whitespace | escape_once }}">
+  <link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}" title="{{ site.title | escape }}">
+  {% include theme-preference.html %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+  {% unless page.url == '/' %}
+  <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+  {% endunless %}
+  {% if page.collection == 'posts' %}
+  {% include mathjax.html %}
+  {% endif %}
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="site-shell" id="top">
+    <header class="site-header">
+      <a class="site-name" href="{% if page.url == '/' %}#top{% else %}{{ '/' | relative_url }}{% endif %}">{{ site.author.name | escape }}</a>
+      <button type="button" id="theme-toggle" class="theme-toggle">
+        <span class="dark-mode-label">Dark mode</span>
+        <span class="light-mode-label">Light mode</span>
+      </button>
+    </header>
+    {% assign home_link = '' %}
+    {% unless page.url == '/' %}
+      {% assign home_link = '/' | relative_url %}
+    {% endunless %}
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="{{ home_link }}#about">About</a>
+      <a href="{{ home_link }}#papers">Papers</a>
+      <a href="{{ home_link }}#talks">Talks</a>
+      <a href="{{ home_link }}#service">Service</a>
+      <a href="{{ '/year-archive/' | relative_url }}"{% if page.url == '/year-archive/' %} aria-current="page"{% endif %}>Blog</a>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <span>{{ site.author.name | escape }}</span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
+  </div>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const header = document.querySelector('.site-header');
+      const nav = document.querySelector('.site-nav');
+      const updateOffsets = () => {
+        root.style.setProperty('--header-height', header.getBoundingClientRect().height + 'px');
+        root.style.setProperty('--nav-height', nav.getBoundingClientRect().height + 'px');
+      };
+
+      updateOffsets();
+      if ('ResizeObserver' in window) {
+        const observer = new ResizeObserver(updateOffsets);
+        observer.observe(header, { box: 'border-box' });
+        observer.observe(nav, { box: 'border-box' });
+      }
+    })();
+  </script>
+  {% unless page.url == '/' %}
+  {% include analytics.html %}
+  {% endunless %}
+</body>
+</html>

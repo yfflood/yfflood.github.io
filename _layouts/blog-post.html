@@ -1,0 +1,61 @@
+---
+layout: minimalist
+---
+<article class="blog-post" aria-labelledby="post-title" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="blog-header">
+    <h1 id="post-title" itemprop="headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h1>
+    <p class="blog-meta">
+      <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      {% if page.read_time %} · {% include read-time.html %}{% endif %}
+      {% if page.modified %}
+        · Updated <time itemprop="dateModified" datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: '%B %d, %Y' }}</time>
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="blog-prose" itemprop="articleBody">
+    {{ content }}
+    {% if page.link %}
+      <p><a href="{{ page.link | escape }}">{{ site.data.ui-text[site.locale].ext_link_label | default: 'Direct link' | escape }}</a></p>
+    {% endif %}
+  </div>
+
+  {% include page__taxonomy.html %}
+  {% if page.share %}{% include social-share.html %}{% endif %}
+
+  {% if page.previous or page.next %}
+    <nav class="blog-post-navigation" aria-label="Post navigation">
+      {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}" rel="prev">
+          <span>Previous</span>
+          {{ page.previous.title | escape }}
+        </a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}" rel="next">
+          <span>Next</span>
+          {{ page.next.title | escape }}
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+
+  {% if site.comments.provider and page.comments %}
+    {% include comments.html %}
+    {% include comments-providers/scripts.html %}
+  {% endif %}
+</article>
+
+{% if page.related and site.related_posts.size > 0 %}
+  <section class="blog-related" aria-labelledby="related-posts-heading">
+    <h2 id="related-posts-heading">{{ site.data.ui-text[site.locale].related_label | default: 'Related posts' | escape }}</h2>
+    <ul class="blog-list">
+      {% for post in site.related_posts limit:4 %}
+        <li>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          <p class="blog-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

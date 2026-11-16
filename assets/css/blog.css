@@ -1,0 +1,196 @@
+.blog-header {
+  padding-block: clamp(2rem, 6vw, 4rem) 1.25rem;
+}
+
+.blog-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  line-height: 1.12;
+}
+
+.blog-header, .blog-list, .blog-prose {
+  overflow-wrap: anywhere;
+}
+
+.blog-meta {
+  margin-block-start: 0.25rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.blog-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding-block-end: 0.85rem;
+  border-block-end: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+.blog-nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.blog-group {
+  padding-block-start: 1.5rem;
+}
+
+.blog-group:last-child {
+  padding-block-end: 2rem;
+}
+
+.blog-group h2, .blog-related h2 {
+  margin-block-end: 0.7rem;
+}
+
+.blog-list {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-list li + li {
+  padding-block-start: 0.75rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.blog-list h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.blog-list h3 a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+}
+
+.blog-list h3 a:hover {
+  color: var(--accent);
+}
+
+.blog-list time.blog-meta {
+  display: block;
+}
+
+.blog-prose {
+  min-inline-size: 0;
+  line-height: 1.65;
+}
+
+.blog-prose > * + * {
+  margin-block-start: 1rem;
+}
+
+.blog-prose :is(h2, h3, h4) {
+  margin-block-start: 1.6rem;
+  line-height: 1.25;
+}
+
+.blog-prose h3 {
+  font-size: 1.2rem;
+}
+
+.blog-prose :is(ul, ol) {
+  padding-inline-start: 1.4rem;
+}
+
+.blog-prose li > :is(ul, ol) {
+  margin-block: 0.35rem;
+}
+
+.blog-prose blockquote {
+  margin-inline: 0;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--line);
+  color: var(--muted);
+}
+
+.blog-prose blockquote > * + * {
+  margin-block-start: 0.5rem;
+}
+
+.blog-prose img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.blog-prose .center-image {
+  display: block;
+  margin-inline: auto;
+}
+
+.blog-prose pre {
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  overflow-x: auto;
+}
+
+.blog-prose table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.blog-prose :is(th, td) {
+  padding: 0.4rem;
+  border-block-end: 1px solid var(--line);
+  text-align: start;
+}
+
+.blog-prose :is(.MathJax_Display, .MathJax_SVG_Display, .MathJax_CHTML_Display, .MJXc-display) {
+  max-inline-size: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.blog-post-navigation, .blog-related, .page__share, .page__taxonomy {
+  margin-block: 1.75rem;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.page__share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+.blog-post-navigation, .page__share, .page__taxonomy {
+  font-size: 0.875rem;
+}
+
+.blog-post-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  overflow-wrap: anywhere;
+}
+
+.blog-post-navigation [rel="next"] {
+  grid-column: 2;
+  text-align: end;
+}
+
+.blog-post-navigation span {
+  display: block;
+  color: var(--muted);
+}
+
+.page__share-title {
+  font-size: inherit;
+  font-weight: 600;
+}
+
+@media (max-width: 36rem) {
+  .blog-post-navigation {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .blog-post-navigation [rel="next"] {
+    grid-column: 1;
+    text-align: start;
+  }
+}

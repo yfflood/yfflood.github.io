@@ -1,0 +1,4 @@
+<nav class="blog-nav" aria-label="Browse blog posts">
+  <a href="{{ '/year-archive/' | relative_url }}"{% if page.url == '/year-archive/' %} aria-current="page"{% endif %}>Posts by Time</a>
+  <a href="{{ '/tags/' | relative_url }}"{% if page.url == '/tags/' %} aria-current="page"{% endif %}>Posts by Tags</a>
+</nav>
