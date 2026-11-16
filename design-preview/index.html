@@ -49,7 +49,6 @@
         <div class="profile-copy">
           <p class="profile-affiliation">Tsinghua University <span aria-hidden="true">/</span> UC Berkeley</p>
           <h1 id="name">Yifan Hong</h1>
-          <p class="profile-statement">I study decision-making with an ambition to connect normative theories with descriptive models.</p>
           <p class="profile-bio">I am a PhD student in industrial engineering at Tsinghua University and currently visiting <a href="https://huiwen-j.github.io/">Prof. Huiwen Jia’s lab</a> at UC Berkeley. I received my B.E. in industrial engineering from Tsinghua University in 2023.</p>
           <ul class="profile-contact" aria-label="Contact and profiles">
             <li><a href="mailto:hongyf23@mails.tsinghua.edu.cn">Email</a></li>
@@ -66,6 +65,7 @@
         <div class="section-heading">
           <h2 id="research-heading">Research interests</h2>
         </div>
+        <p class="research-statement">I study decision-making with an ambition to connect normative theories with descriptive models.</p>
         <ul class="topic-list">
           <li>
             <h3>Sequential Decision Algorithms</h3>
@@ -142,36 +142,60 @@
         <section class="talks" id="talks" aria-labelledby="talks-heading">
           <div class="section-heading">
             <h2 id="talks-heading">Talks</h2>
-            <a class="section-link" href="https://yfflood.github.io/talks/">Talks archive <span aria-hidden="true">↗</span></a>
           </div>
-          <ul class="talk-list">
+          <ul class="talk-list" tabindex="0" aria-label="Talks">
             <li>
-              <span class="talk-year">2026</span>
-              <div class="talk-detail">
-                <h3>Online Irreversible Subset Expansion under Active-Set Market Feedback</h3>
-                <p>Oral presentation · INFORMS Revenue Management and Pricing Section Conference</p>
-              </div>
+              <details>
+                <summary class="talk-summary">
+                  <span class="talk-year">2026</span>
+                  <span class="talk-title">Online Irreversible Subset Expansion under Active-Set Market Feedback</span>
+                </summary>
+                <div class="talk-body">
+                  <p class="talk-meta">Oral presentation · INFORMS Revenue Management and Pricing Section Conference</p>
+                </div>
+              </details>
             </li>
             <li>
-              <span class="talk-year">2026</span>
-              <div class="talk-detail">
-                <h3>Decision under Combinatorial Risk</h3>
-                <p>PhD incubator talk · INFORMS Advances in Decision Analysis Conference</p>
-              </div>
+              <details>
+                <summary class="talk-summary">
+                  <span class="talk-year">2026</span>
+                  <span class="talk-title">Decision under Combinatorial Risk</span>
+                </summary>
+                <div class="talk-body">
+                  <p class="talk-meta">PhD incubator talk · INFORMS Advances in Decision Analysis Conference</p>
+                </div>
+              </details>
             </li>
             <li>
-              <span class="talk-year">2025</span>
-              <div class="talk-detail">
-                <h3>LAMDA: Large Language Model as Decision Analyst</h3>
-                <p>Oral presentation · INFORMS Annual Meeting</p>
-              </div>
+              <details>
+                <summary class="talk-summary">
+                  <span class="talk-year">2025</span>
+                  <span class="talk-title">LAMDA: Large Language Model as Decision Analyst</span>
+                </summary>
+                <div class="talk-body">
+                  <p class="talk-meta">Oral presentation · INFORMS Annual Meeting · October 26 · Atlanta, Georgia</p>
+                  <p class="talk-abstract">
+                    Influence diagrams address the challenges of decision-making under risk by structuring information, decisions and values, while clearly depicting uncertainties and probabilistic dependencies.
+                    However, constructing an influence diagram requires expertise in decision analysis and is further complicated by the need to process large amounts of contextual information.
+                    This work automates the construction of influence diagrams from natural language input, leveraging large language models (LLMs).
+                    We design a workflow to prompt LLMs to output elements of an influence diagram and resolve issues through verification and regeneration.
+                    We also construct a new dataset of typical decision problems under risk. Evaluations using this dataset demonstrate that our framework effectively identifies key factors and relationships in natural language, making better decisions than standalone LLMs and LLMs enhanced with standard techniques such as chain-of-thought (CoT).
+                    The dataset and code are available at <a href="https://github.com/lamda-thu/LAMDA">this URL</a>.
+                    Furthermore, we extend the framework to aggregate opinions from multiple sources and apply the aggregation method to discussions by groups of disease control experts on a hypothetical pandemic scenario.
+                  </p>
+                </div>
+              </details>
             </li>
             <li>
-              <span class="talk-year">2023</span>
-              <div class="talk-detail">
-                <h3>Decision-Making as Categorization</h3>
-                <p>Oral presentation · INFORMS Annual Meeting</p>
-              </div>
+              <details>
+                <summary class="talk-summary">
+                  <span class="talk-year">2023</span>
+                  <span class="talk-title">Decision-Making as Categorization</span>
+                </summary>
+                <div class="talk-body">
+                  <p class="talk-meta">Oral presentation · INFORMS Annual Meeting · October 16 · Phoenix, Arizona</p>
+                </div>
+              </details>
             </li>
           </ul>
         </section>

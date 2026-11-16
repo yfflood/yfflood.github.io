@@ -46,12 +46,6 @@ html[data-design="minimal"] {
     line-height: 1.05;
   }
 
-  .profile-statement {
-    max-width: 36ch;
-    font-size: clamp(1.17rem, 3vw, 1.48rem);
-    line-height: 1.4;
-  }
-
   .profile-bio {
     max-width: 62ch;
     margin-top: 0.9rem;
@@ -95,7 +89,7 @@ html[data-design="minimal"] {
     align-items: baseline;
   }
 
-  .topic-list h3, .paper-title, .talk-detail h3 {
+  .topic-list h3, .paper-title {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.4;
@@ -117,12 +111,12 @@ html[data-design="minimal"] {
     line-height: 1.4;
   }
 
-  .paper-list, .talk-list {
+  .paper-list {
     display: grid;
     gap: 1rem;
   }
 
-  .paper-list li, .talk-list li {
+  .paper-list li {
     display: grid;
     grid-template-columns: 2.75rem minmax(0, 1fr);
     gap: 0.6rem;
@@ -142,7 +136,7 @@ html[data-design="minimal"] {
     text-decoration-thickness: 0.12em;
   }
 
-  .paper-authors, .paper-venue, .talk-detail p {
+  .paper-authors, .paper-venue {
     margin-top: 0.13rem;
     font-size: 0.875rem;
   }

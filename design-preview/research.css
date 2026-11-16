@@ -70,16 +70,6 @@ html[data-design="research"] {
     line-height: 1;
   }
 
-  .profile-statement {
-    max-width: 37ch;
-    margin: 18px 0 0;
-    color: #f3fbfd;
-    font-size: clamp(1.2rem, 2vw, 1.65rem);
-    font-weight: 500;
-    letter-spacing: -0.032em;
-    line-height: 1.28;
-  }
-
   .profile-bio {
     max-width: 62ch;
     margin: 14px 0 0;
@@ -148,13 +138,6 @@ html[data-design="research"] {
     line-height: 1.12;
   }
 
-  .section-link {
-    flex-shrink: 0;
-    color: var(--accent);
-    font-size: 0.82rem;
-    font-weight: 650;
-  }
-
   .topics {
     margin-block: 0 41px;
   }
@@ -178,8 +161,7 @@ html[data-design="research"] {
     background: var(--research-panel);
   }
 
-  .topic-list h3,
-  .talk-list h3 {
+  .topic-list h3 {
     margin: 0 0 5px;
     font-family: var(--sans);
     font-size: 1rem;
@@ -188,8 +170,7 @@ html[data-design="research"] {
     line-height: 1.25;
   }
 
-  .topic-list p,
-  .talk-list p {
+  .topic-list p {
     margin: 0;
     color: var(--muted);
     font-size: 0.9rem;
@@ -232,8 +213,7 @@ html[data-design="research"] {
     padding: 0;
   }
 
-  .paper-list li,
-  .talk-list li {
+  .paper-list li {
     display: grid;
     grid-template-columns: 3.2rem minmax(0, 1fr);
     gap: 0 16px;
@@ -241,7 +221,6 @@ html[data-design="research"] {
   }
 
   .paper-list li + li,
-  .talk-list li + li,
   .service-list li + li {
     border-top: 1px solid var(--line);
   }
@@ -292,6 +271,10 @@ html[data-design="research"] {
     border: 1px solid var(--line);
     border-radius: 4px;
     background: var(--research-panel);
+  }
+
+  .talk-list {
+    --talk-padding: 1rem;
   }
 
   .service-list li {
@@ -358,8 +341,7 @@ html[data-design="research"] {
       margin: 0;
     }
 
-    .paper-list li,
-    .talk-list li {
+    .paper-list li {
       grid-template-columns: 2.55rem minmax(0, 1fr);
       gap: 0 9px;
       padding-inline: 13px;

@@ -147,8 +147,10 @@ img {
   list-style: none;
 }
 
-.section-link {
-  font-size: 0.875rem;
+.research-statement {
+  max-width: 62ch;
+  margin-bottom: 1rem;
+  color: var(--muted);
 }
 
 .paper-year, .talk-year {
@@ -157,8 +159,76 @@ img {
   font-variant-numeric: tabular-nums;
 }
 
-.paper-authors, .paper-venue, .talk-detail p {
+.paper-authors, .paper-venue, .talk-meta {
   color: var(--muted);
+}
+
+.talk-list {
+  max-block-size: min(19rem, 54vh);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.talk-list li + li {
+  border-top: 1px solid var(--line);
+}
+
+.talk-summary {
+  display: grid;
+  grid-template-columns: 2.45rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.5rem;
+  padding: 0.85rem var(--talk-padding, 0.5rem);
+  cursor: pointer;
+  list-style: none;
+}
+
+.talk-summary::-webkit-details-marker {
+  display: none;
+}
+
+.talk-summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border: solid var(--accent);
+  border-width: 0 1.5px 1.5px 0;
+  margin: 0.36rem 0.2rem 0 0.15rem;
+  transform: rotate(45deg);
+}
+
+details[open] > .talk-summary::after {
+  margin-top: 0.58rem;
+  transform: rotate(225deg);
+}
+
+.talk-summary:focus-visible {
+  outline-offset: -2px;
+}
+
+.talk-title {
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.talk-summary:hover .talk-title {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.talk-body {
+  padding: 0 var(--talk-padding, 0.5rem) 1rem;
+  padding-inline-start: calc(var(--talk-padding, 0.5rem) + 2.95rem);
+}
+
+.talk-meta {
+  font-size: 0.875rem;
+}
+
+.talk-abstract {
+  margin-top: 0.65rem;
+  font-size: 0.95rem;
 }
 
 .paper-title a {
@@ -214,14 +284,6 @@ img {
     margin-block: 0.45rem 0.85rem;
     font: 500 clamp(3.6rem, 7.6vw, 6.25rem)/1.02 var(--serif);
     letter-spacing: -0.055em;
-  }
-
-  .profile-statement {
-    max-width: 34ch;
-    margin-bottom: 1.15rem;
-    font: 400 clamp(1.45rem, 2.8vw, 2.05rem)/1.23 var(--serif);
-    letter-spacing: -0.025em;
-    text-wrap: pretty;
   }
 
   .profile-bio {
@@ -296,13 +358,13 @@ img {
     letter-spacing: -0.015em;
   }
 
-  .paper-list li, .talk-list li {
+  .paper-list li {
     display: grid;
     grid-template-columns: 2.8rem minmax(0, 1fr);
     gap: 0.75rem;
   }
 
-  .paper-list li + li, .talk-list li + li {
+  .paper-list li + li {
     border-top: 1px solid var(--line);
     margin-top: 1rem;
     padding-top: 1rem;
@@ -317,7 +379,7 @@ img {
     letter-spacing: -0.02em;
   }
 
-  .paper-authors, .paper-venue, .talk-detail p {
+  .paper-authors, .paper-venue {
     margin-top: 0.2rem;
     font-size: 0.9rem;
   }
@@ -328,7 +390,7 @@ img {
     gap: 2.5rem;
   }
 
-  .talk-detail h3 {
+  .talk-title {
     font: 500 1.2rem/1.23 var(--serif);
     letter-spacing: -0.015em;
   }
@@ -395,7 +457,7 @@ img {
       gap: 1rem;
     }
 
-    .paper-list li, .talk-list li {
+    .paper-list li {
       grid-template-columns: 2.4rem minmax(0, 1fr);
       gap: 0.45rem;
     }
