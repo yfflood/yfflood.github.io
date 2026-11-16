@@ -6,8 +6,12 @@
   --muted: #535967;
   --line: #e3e5ea;
   --accent: #334887;
-  --tag-background: #edf0f7;
-  --tag-ink: #384869;
+  --tag-preprint-background: #e9ebef;
+  --tag-preprint-ink: #374151;
+  --tag-conference-background: #e5effd;
+  --tag-conference-ink: #204a80;
+  --tag-journal-background: #25483c;
+  --tag-journal-ink: #f0f8f4;
   --content-width: 43rem;
 }
 
@@ -18,8 +22,12 @@
   --muted: #b7bfd1;
   --line: #353e51;
   --accent: #b7c7fa;
-  --tag-background: #2a3550;
-  --tag-ink: #d5dfff;
+  --tag-preprint-background: #313744;
+  --tag-preprint-ink: #e1e6ee;
+  --tag-conference-background: #263c60;
+  --tag-conference-ink: #dceaff;
+  --tag-journal-background: #234536;
+  --tag-journal-ink: #d2f1dc;
 }
 
 *, *::before, *::after {
@@ -284,11 +292,24 @@ h2 {
   max-width: 100%;
   padding: 0.15rem 0.4rem;
   border-radius: 0.2rem;
-  background: var(--tag-background);
-  color: var(--tag-ink);
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.3;
+}
+
+.paper-tag--preprint {
+  background: var(--tag-preprint-background);
+  color: var(--tag-preprint-ink);
+}
+
+.paper-tag--conference {
+  background: var(--tag-conference-background);
+  color: var(--tag-conference-ink);
+}
+
+.paper-tag--journal {
+  background: var(--tag-journal-background);
+  color: var(--tag-journal-ink);
 }
 
 .paper-title a {
