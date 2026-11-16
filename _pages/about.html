@@ -89,7 +89,7 @@ redirect_from:
                 <span class="paper-tag paper-tag--journal">Decision Analysis</span>
               </div>
               <div class="paper-detail">
-                <h4 class="paper-title"><a href="https://pubsonline.informs.org/doi/10.1287/deca.2025.0438">LAMDA: Large Language Model as Decision Analyst</a></h4>
+                <h4 class="paper-title"><a href="{{ '/files/lamda-large-language-model-as-decision-analyst-preprint.pdf' | relative_url }}">LAMDA: Large Language Model as Decision Analyst</a></h4>
                 <p class="paper-authors">Hong, Y., Qin, S., Wang, C.</p>
                 <p class="paper-venue"><cite>Decision Analysis</cite>, Articles in Advance</p>
               </div>
@@ -100,7 +100,7 @@ redirect_from:
                 <span class="paper-tag paper-tag--preprint">Preprint</span>
               </div>
               <div class="paper-detail">
-                <h4 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7496998">Learning for Irreversible Subset Expansion: Objective Degeneracy and Thompson Sampling under Information Dilution</a></h4>
+                <h4 class="paper-title"><a href="{{ '/files/ssrn-7496998.pdf' | relative_url }}">Learning for Irreversible Subset Expansion: Objective Degeneracy and Thompson Sampling under Information Dilution</a></h4>
                 <p class="paper-authors">Hong, Y., Jia, H., &amp; Wang, C.</p>
                 <p class="paper-venue">SSRN 7496998</p>
               </div>
@@ -194,5 +194,23 @@ redirect_from:
       <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </footer>
   </div>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const header = document.querySelector('.site-header');
+      const nav = document.querySelector('.site-nav');
+      const updateOffsets = () => {
+        root.style.setProperty('--header-height', header.getBoundingClientRect().height + 'px');
+        root.style.setProperty('--nav-height', nav.getBoundingClientRect().height + 'px');
+      };
+
+      updateOffsets();
+      if ('ResizeObserver' in window) {
+        const observer = new ResizeObserver(updateOffsets);
+        observer.observe(header, { box: 'border-box' });
+        observer.observe(nav, { box: 'border-box' });
+      }
+    })();
+  </script>
 </body>
 </html>
