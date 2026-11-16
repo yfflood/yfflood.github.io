@@ -1,0 +1,9 @@
+<script>
+  try {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  } catch (error) {
+    // Keep the default theme if storage is unavailable.
+  }
+</script>
