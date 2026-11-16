@@ -1,0 +1,198 @@
+---
+layout: null
+permalink: /
+title: "About me"
+excerpt: "Yifan Hong studies decision-making, with research in sequential decision algorithms, behavioral models, and expert elicitation."
+redirect_from:
+  - /about/
+  - /about.html
+---
+<!doctype html>
+<html lang="{{ site.locale | default: 'en' | slice: 0, 2 }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include seo.html %}
+  <meta name="description" content="{{ page.excerpt | escape }}">
+  <link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}" title="{{ site.title | escape }}">
+  {% include theme-preference.html %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="site-shell" id="top">
+    <header class="site-header">
+      <a class="site-name" href="#top">{{ site.author.name | escape }}</a>
+      <button type="button" id="theme-toggle" class="theme-toggle">
+        <span class="dark-mode-label">Dark mode</span>
+        <span class="light-mode-label">Light mode</span>
+      </button>
+    </header>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="#about">About</a>
+      <a href="#papers">Papers</a>
+      <a href="#talks">Talks</a>
+      <a href="#service">Service</a>
+      <a href="{{ '/year-archive/' | relative_url }}">Blog</a>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section class="profile" id="about" aria-labelledby="name">
+        <p class="profile-affiliation">Tsinghua University <span aria-hidden="true">/</span> UC Berkeley</p>
+        <h1 id="name">{{ site.author.name | escape }}</h1>
+        <p class="profile-bio">I am a PhD student in industrial engineering at Tsinghua University and currently visiting <a href="https://huiwen-j.github.io/">Prof. Huiwen Jia’s lab</a> at UC Berkeley. I received my B.E. in industrial engineering from Tsinghua University in 2023.</p>
+        <ul class="profile-contact" aria-label="Contact and profiles">
+          <li><a href="mailto:{{ site.author.email | escape }}">Email</a></li>
+          <li><a href="{{ site.author.googlescholar | escape }}">Google Scholar</a></li>
+          <li><a href="{{ site.author.orcid | escape }}">ORCID</a></li>
+          <li><a href="{{ site.author.github | escape }}">GitHub</a></li>
+          <li><a href="{{ site.author.researchgate | escape }}">ResearchGate</a></li>
+        </ul>
+      </section>
+
+      <section class="topics" id="research" aria-labelledby="research-heading">
+        <div class="section-heading">
+          <h2 id="research-heading">Research interests</h2>
+        </div>
+        <p class="research-statement">I study decision-making with an ambition to connect normative theories with descriptive models.</p>
+        <ul class="topic-list">
+          <li>
+            <h3>Sequential Decision Algorithms</h3>
+            <p>Learning and decision-making under incomplete information</p>
+          </li>
+          <li>
+            <h3>Behavioral Models</h3>
+            <p>Human decision-making under risk and uncertainty</p>
+          </li>
+          <li>
+            <h3>Expert Elicitation Methods</h3>
+            <p>Knowledge extraction and aggregation</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="papers" id="papers" aria-labelledby="papers-heading">
+        <div class="section-heading">
+          <h2 id="papers-heading">Papers</h2>
+        </div>
+        <div class="paper-group">
+          <h3>Normative and Prescriptive Decision Models</h3>
+          <ul class="paper-list">
+            <li>
+              <div class="paper-meta">
+                <span class="paper-year">2026</span>
+                <span class="paper-tag">Decision Analysis</span>
+              </div>
+              <div class="paper-detail">
+                <h4 class="paper-title"><a href="https://pubsonline.informs.org/doi/10.1287/deca.2025.0438">LAMDA: Large Language Model as Decision Analyst</a></h4>
+                <p class="paper-authors">Hong, Y., Qin, S., Wang, C.</p>
+                <p class="paper-venue"><cite>Decision Analysis</cite>, Articles in Advance</p>
+              </div>
+            </li>
+            <li>
+              <div class="paper-meta">
+                <span class="paper-year">2026</span>
+                <span class="paper-tag">Preprint</span>
+              </div>
+              <div class="paper-detail">
+                <h4 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7496998">Learning for Irreversible Subset Expansion: Objective Degeneracy and Thompson Sampling under Information Dilution</a></h4>
+                <p class="paper-authors">Hong, Y., Jia, H., &amp; Wang, C.</p>
+                <p class="paper-venue">SSRN 7496998</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="paper-group">
+          <h3>Descriptive Decision Models</h3>
+          <ul class="paper-list">
+            <li>
+              <div class="paper-meta">
+                <span class="paper-year">2026</span>
+                <span class="paper-tag">Preprint</span>
+              </div>
+              <div class="paper-detail">
+                <h4 class="paper-title"><a href="https://arxiv.org/abs/2606.10092">Decision-Making under Combinatorial Risk</a></h4>
+                <p class="paper-authors">Hong, Y., Fan, H., &amp; Wang, C.</p>
+                <p class="paper-venue">arXiv:2606.10092</p>
+              </div>
+            </li>
+            <li>
+              <div class="paper-meta">
+                <span class="paper-year">2025</span>
+                <span class="paper-tag">CogSci</span>
+              </div>
+              <div class="paper-detail">
+                <h4 class="paper-title"><a href="https://escholarship.org/content/qt31c2r0js/qt31c2r0js.pdf">State Sensitivity in an Additive Discovery Game</a></h4>
+                <p class="paper-authors">Hong, Y., Wang, C., &amp; Zhao, B.</p>
+                <p class="paper-venue"><cite>Proceedings of the Annual Meeting of the Cognitive Science Society</cite>, 47</p>
+              </div>
+            </li>
+            <li>
+              <div class="paper-meta">
+                <span class="paper-year">2025</span>
+                <span class="paper-tag">CogSci</span>
+              </div>
+              <div class="paper-detail">
+                <h4 class="paper-title"><a href="https://escholarship.org/content/qt17z1w2g9/qt17z1w2g9.pdf">A Rational Model of Dimension-reduced Human Categorization</a></h4>
+                <p class="paper-authors">Hong, Y., Wang, C.</p>
+                <p class="paper-venue"><cite>Proceedings of the Annual Meeting of the Cognitive Science Society</cite>, 47</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="activities">
+        <section class="talks" id="talks" aria-labelledby="talks-heading">
+          <div class="section-heading">
+            <h2 id="talks-heading">Talks</h2>
+          </div>
+          {% assign talks = site.talks | sort: 'date' | reverse %}
+          <ul class="talk-list" tabindex="0" aria-label="Talks">
+            {% for talk in talks %}
+            {% assign abstract = talk.content | strip %}
+            <li class="talk-entry">
+              <span class="talk-year">{{ talk.date | date: '%Y' }}</span>
+              <div>
+                <h3 class="talk-title">{{ talk.title | escape }}</h3>
+                <p class="talk-meta">
+                  {% if talk.talk_type %}{{ talk.talk_type | escape }} · {% endif %}
+                  {{ talk.venue | escape }}
+                  · <time datetime="{{ talk.date | date: '%Y-%m-%d' }}">{{ talk.date | date: '%-d %b' }}</time>
+                  · {{ talk.location | escape }}
+                </p>
+                {% if abstract != empty %}
+                <details class="talk-disclosure">
+                  <summary>Abstract</summary>
+                  <div class="talk-abstract">{{ abstract | markdownify }}</div>
+                </details>
+                {% endif %}
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <section class="service" id="service" aria-labelledby="service-heading">
+          <div class="section-heading">
+            <h2 id="service-heading">Service</h2>
+          </div>
+          <ul class="service-list">
+            <li>Reviewer, Annual Meeting of the Cognitive Science Society (CogSci) 2026</li>
+            <li>Reviewer, <cite>Decision Analysis</cite></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>{{ site.author.name | escape }}</span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
+  </div>
+</body>
+</html>

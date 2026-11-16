@@ -16,14 +16,7 @@
 </script>
 
 <!-- Dark mode FOUC prevention - must be before CSS -->
-<script>
-  (function() {
-    var saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  })();
-</script>
+{% include theme-preference.html %}
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">

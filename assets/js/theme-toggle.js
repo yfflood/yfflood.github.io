@@ -1,6 +1,6 @@
 /**
  * Theme Toggle for Dark Mode
- * Handles theme switching, localStorage persistence, and system preference detection
+ * Handles theme switching and localStorage persistence
  */
 (function() {
   'use strict';
@@ -27,7 +27,11 @@
     }
 
     if (save) {
-      localStorage.setItem(STORAGE_KEY, theme);
+      try {
+        localStorage.setItem(STORAGE_KEY, theme);
+      } catch (error) {
+        // The page can still switch themes without storage.
+      }
     }
 
     updateToggleButton();
