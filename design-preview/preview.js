@@ -1,4 +1,4 @@
-const conceptLinks = document.querySelectorAll('[data-preview-design]');
+const conceptLinks = Array.from(document.querySelectorAll('[data-preview-design]'));
 
 function selectDesign(design) {
   document.documentElement.dataset.design = design;
@@ -13,7 +13,8 @@ function selectDesign(design) {
 
 function syncDesign() {
   const design = new URLSearchParams(location.search).get('design');
-  selectDesign(design === 'research' ? 'research' : 'editorial');
+  const link = conceptLinks.find((link) => link.dataset.previewDesign === design);
+  selectDesign(link?.dataset.previewDesign ?? 'editorial');
 }
 
 for (const link of conceptLinks) {

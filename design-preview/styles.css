@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   --sans: "Instrument Sans", Arial, sans-serif;
-  --serif: "Instrument Serif", Georgia, serif;
+  --serif: "Spectral", Georgia, serif;
   --mono: "IBM Plex Mono", Consolas, monospace;
   --background: #f8f4ed;
   --ink: #201e1a;
@@ -161,6 +161,17 @@ img {
   color: var(--muted);
 }
 
+.paper-title a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+}
+
+.paper-title a:hover {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+}
+
 [data-design="editorial"] {
   .site-shell {
     width: min(100% - 3rem, 68rem);
@@ -173,7 +184,7 @@ img {
   }
 
   .site-name {
-    font: 1.7rem/1 var(--serif);
+    font: 500 1.4rem/1.15 var(--serif);
   }
 
   .site-nav {
@@ -200,15 +211,17 @@ img {
   }
 
   h1 {
-    margin-block: 0.45rem 1rem;
-    font: 400 clamp(4rem, 8.5vw, 7rem)/0.9 var(--serif);
-    letter-spacing: -0.025em;
+    margin-block: 0.45rem 0.85rem;
+    font: 500 clamp(3.6rem, 7.6vw, 6.25rem)/1.02 var(--serif);
+    letter-spacing: -0.055em;
   }
 
   .profile-statement {
-    max-width: 25ch;
-    margin-bottom: 1.25rem;
-    font: 400 clamp(1.7rem, 3.5vw, 2.5rem)/1.06 var(--serif);
+    max-width: 34ch;
+    margin-bottom: 1.15rem;
+    font: 400 clamp(1.45rem, 2.8vw, 2.05rem)/1.23 var(--serif);
+    letter-spacing: -0.025em;
+    text-wrap: pretty;
   }
 
   .profile-bio {
@@ -238,7 +251,8 @@ img {
   }
 
   h2 {
-    font: 400 clamp(2.45rem, 5vw, 3.7rem)/1.02 var(--serif);
+    font: 500 clamp(2rem, 4vw, 3.1rem)/1.13 var(--serif);
+    letter-spacing: -0.045em;
   }
 
   .topics, .papers, .activities {
@@ -258,7 +272,8 @@ img {
 
   .topic-list h3 {
     margin-bottom: 0.25rem;
-    font: 400 clamp(1.35rem, 2.7vw, 1.95rem)/1.1 var(--serif);
+    font: 500 clamp(1.12rem, 2vw, 1.55rem)/1.18 var(--serif);
+    letter-spacing: -0.02em;
   }
 
   .topic-list p {
@@ -277,7 +292,8 @@ img {
 
   .paper-group > h3 {
     color: var(--accent);
-    font: 400 1.55rem/1.13 var(--serif);
+    font: 500 1.25rem/1.23 var(--serif);
+    letter-spacing: -0.015em;
   }
 
   .paper-list li, .talk-list li {
@@ -297,7 +313,8 @@ img {
   }
 
   .paper-title {
-    font: 400 clamp(1.4rem, 2.6vw, 1.85rem)/1.08 var(--serif);
+    font: 500 clamp(1.18rem, 2vw, 1.5rem)/1.24 var(--serif);
+    letter-spacing: -0.02em;
   }
 
   .paper-authors, .paper-venue, .talk-detail p {
@@ -312,7 +329,8 @@ img {
   }
 
   .talk-detail h3 {
-    font: 400 1.45rem/1.1 var(--serif);
+    font: 500 1.2rem/1.23 var(--serif);
+    letter-spacing: -0.015em;
   }
 
   .service-list {
@@ -366,7 +384,7 @@ img {
     }
 
     h1 {
-      font-size: clamp(3.3rem, 15vw, 4.3rem);
+      font-size: clamp(2.9rem, 13vw, 4rem);
     }
 
     .topic-list, .paper-group {

@@ -6,15 +6,17 @@
   <meta name="robots" content="noindex">
   <title>Homepage design concepts · Yifan Hong</title>
   <script>
-    if (new URLSearchParams(location.search).get('design') === 'research') {
-      document.documentElement.dataset.design = 'research';
+    const initialDesign = new URLSearchParams(location.search).get('design');
+    if (initialDesign === 'research' || initialDesign === 'minimal') {
+      document.documentElement.dataset.design = initialDesign;
     }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&family=Spectral:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="research.css">
+  <link rel="stylesheet" href="minimal.css">
   <script src="preview.js" defer></script>
 </head>
 <body>
@@ -25,6 +27,7 @@
       <nav class="preview-options" aria-label="Homepage concepts">
         <a href="?design=editorial" data-preview-design="editorial" aria-current="true">Editorial</a>
         <a href="?design=research" data-preview-design="research">Research index</a>
+        <a href="?design=minimal" data-preview-design="minimal">Minimalist</a>
       </nav>
       <a class="preview-back" href="https://yfflood.github.io/">Current site <span aria-hidden="true">↗</span></a>
     </div>
@@ -82,7 +85,6 @@
       <section class="papers" id="papers" aria-labelledby="papers-heading">
         <div class="section-heading">
           <h2 id="papers-heading">Selected papers</h2>
-          <a class="section-link" href="https://yfflood.github.io/publications/">Publications archive <span aria-hidden="true">↗</span></a>
         </div>
         <div class="paper-group">
           <h3>Normative and Prescriptive Decision Models</h3>
@@ -90,15 +92,15 @@
             <li>
               <span class="paper-year">2026</span>
               <div class="paper-detail">
-                <h4 class="paper-title">LAMDA: Large Language Model as Decision Analyst</h4>
+                <h4 class="paper-title"><a href="https://pubsonline.informs.org/doi/10.1287/deca.2025.0438">LAMDA: Large Language Model as Decision Analyst</a></h4>
                 <p class="paper-authors">Hong, Y., Qin, S., Wang, C.</p>
-                <p class="paper-venue">Accepted to <cite>Decision Analysis</cite></p>
+                <p class="paper-venue"><cite>Decision Analysis</cite>, Articles in Advance</p>
               </div>
             </li>
             <li>
               <span class="paper-year">2026</span>
               <div class="paper-detail">
-                <h4 class="paper-title">Learning for Irreversible Subset Expansion: Objective Degeneracy and Thompson Sampling under Information Dilution</h4>
+                <h4 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7496998">Learning for Irreversible Subset Expansion: Objective Degeneracy and Thompson Sampling under Information Dilution</a></h4>
                 <p class="paper-authors">Hong, Y., Jia, H., &amp; Wang, C.</p>
                 <p class="paper-venue">SSRN 7496998</p>
               </div>
@@ -111,7 +113,7 @@
             <li>
               <span class="paper-year">2026</span>
               <div class="paper-detail">
-                <h4 class="paper-title">Decision-Making under Combinatorial Risk</h4>
+                <h4 class="paper-title"><a href="https://arxiv.org/abs/2606.10092">Decision-Making under Combinatorial Risk</a></h4>
                 <p class="paper-authors">Hong, Y., Fan, H., &amp; Wang, C.</p>
                 <p class="paper-venue">arXiv preprint arXiv:2606.10092</p>
               </div>
@@ -119,7 +121,7 @@
             <li>
               <span class="paper-year">2025</span>
               <div class="paper-detail">
-                <h4 class="paper-title">State Sensitivity in an Additive Discovery Game</h4>
+                <h4 class="paper-title"><a href="https://escholarship.org/content/qt31c2r0js/qt31c2r0js.pdf">State Sensitivity in an Additive Discovery Game</a></h4>
                 <p class="paper-authors">Hong, Y., Wang, C., &amp; Zhao, B.</p>
                 <p class="paper-venue"><cite>Proceedings of the Annual Meeting of the Cognitive Science Society</cite>, 47</p>
               </div>
@@ -127,7 +129,7 @@
             <li>
               <span class="paper-year">2025</span>
               <div class="paper-detail">
-                <h4 class="paper-title">A Rational Model of Dimension-reduced Human Categorization</h4>
+                <h4 class="paper-title"><a href="https://escholarship.org/content/qt17z1w2g9/qt17z1w2g9.pdf">A Rational Model of Dimension-reduced Human Categorization</a></h4>
                 <p class="paper-authors">Hong, Y., Wang, C.</p>
                 <p class="paper-venue"><cite>Proceedings of the Annual Meeting of the Cognitive Science Society</cite>, 47</p>
               </div>
