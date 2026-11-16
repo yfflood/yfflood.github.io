@@ -27,7 +27,7 @@ html[data-design="research"] {
     font-family: var(--sans);
     font-size: 1.11rem;
     font-weight: 700;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.015em;
   }
 
   .site-nav {
@@ -66,7 +66,7 @@ html[data-design="research"] {
     font-family: var(--sans);
     font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 700;
-    letter-spacing: -0.075em;
+    letter-spacing: -0.04em;
     line-height: 1;
   }
 
@@ -144,7 +144,7 @@ html[data-design="research"] {
     font-family: var(--sans);
     font-size: clamp(1.55rem, 3vw, 2.35rem);
     font-weight: 700;
-    letter-spacing: -0.055em;
+    letter-spacing: -0.025em;
     line-height: 1.12;
   }
 
