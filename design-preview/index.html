@@ -6,16 +6,14 @@
   <meta name="robots" content="noindex">
   <title>Homepage design concepts · Yifan Hong</title>
   <script>
-    const initialDesign = new URLSearchParams(location.search).get('design');
-    if (initialDesign === 'research' || initialDesign === 'minimal') {
-      document.documentElement.dataset.design = initialDesign;
+    if (new URLSearchParams(location.search).get('design') === 'minimal') {
+      document.documentElement.dataset.design = 'minimal';
     }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&family=Spectral:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="research.css">
   <link rel="stylesheet" href="minimal.css">
   <script src="preview.js" defer></script>
 </head>
@@ -26,7 +24,6 @@
       <span class="preview-label">Homepage concepts</span>
       <nav class="preview-options" aria-label="Homepage concepts">
         <a href="?design=editorial" data-preview-design="editorial" aria-current="true">Editorial</a>
-        <a href="?design=research" data-preview-design="research">Research index</a>
         <a href="?design=minimal" data-preview-design="minimal">Minimalist</a>
       </nav>
       <a class="preview-back" href="https://yfflood.github.io/">Current site <span aria-hidden="true">↗</span></a>
@@ -36,16 +33,17 @@
   <div class="site-shell" id="top">
     <header class="site-header">
       <a class="site-name" href="#top">Yifan Hong</a>
-      <nav class="site-nav" aria-label="Site navigation">
-        <a href="#research">Research</a>
-        <a href="#papers">Papers</a>
-        <a href="#talks">Talks</a>
-        <a href="https://yfflood.github.io/year-archive/">Blog</a>
-      </nav>
     </header>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="#about">About</a>
+      <a href="#papers">Papers</a>
+      <a href="#talks">Talks</a>
+      <a href="#service">Service</a>
+      <a href="https://yfflood.github.io/year-archive/">Blog</a>
+    </nav>
 
     <main id="main" tabindex="-1">
-      <section class="profile" aria-labelledby="name">
+      <section class="profile" id="about" aria-labelledby="name">
         <div class="profile-copy">
           <p class="profile-affiliation">Tsinghua University <span aria-hidden="true">/</span> UC Berkeley</p>
           <h1 id="name">Yifan Hong</h1>
@@ -144,36 +142,27 @@
             <h2 id="talks-heading">Talks</h2>
           </div>
           <ul class="talk-list" tabindex="0" aria-label="Talks">
-            <li>
-              <details>
-                <summary class="talk-summary">
-                  <span class="talk-year">2026</span>
-                  <span class="talk-title">Online Irreversible Subset Expansion under Active-Set Market Feedback</span>
-                </summary>
-                <div class="talk-body">
-                  <p class="talk-meta">Oral presentation · INFORMS Revenue Management and Pricing Section Conference</p>
-                </div>
-              </details>
+            <li class="talk-entry">
+              <span class="talk-year">2026</span>
+              <div>
+                <h3 class="talk-title">Online Irreversible Subset Expansion under Active-Set Market Feedback</h3>
+                <p class="talk-meta">Oral presentation · INFORMS Revenue Management and Pricing Section Conference</p>
+              </div>
             </li>
-            <li>
-              <details>
-                <summary class="talk-summary">
-                  <span class="talk-year">2026</span>
-                  <span class="talk-title">Decision under Combinatorial Risk</span>
-                </summary>
-                <div class="talk-body">
-                  <p class="talk-meta">PhD incubator talk · INFORMS Advances in Decision Analysis Conference</p>
-                </div>
-              </details>
+            <li class="talk-entry">
+              <span class="talk-year">2026</span>
+              <div>
+                <h3 class="talk-title">Decision under Combinatorial Risk</h3>
+                <p class="talk-meta">PhD incubator talk · INFORMS Advances in Decision Analysis Conference</p>
+              </div>
             </li>
-            <li>
-              <details>
-                <summary class="talk-summary">
-                  <span class="talk-year">2025</span>
-                  <span class="talk-title">LAMDA: Large Language Model as Decision Analyst</span>
-                </summary>
-                <div class="talk-body">
-                  <p class="talk-meta">Oral presentation · INFORMS Annual Meeting · October 26 · Atlanta, Georgia</p>
+            <li class="talk-entry">
+              <span class="talk-year">2025</span>
+              <div>
+                <h3 class="talk-title">LAMDA: Large Language Model as Decision Analyst</h3>
+                <p class="talk-meta">Oral presentation · INFORMS Annual Meeting · October 26 · Atlanta, Georgia</p>
+                <details class="talk-disclosure">
+                  <summary>Abstract</summary>
                   <p class="talk-abstract">
                     Influence diagrams address the challenges of decision-making under risk by structuring information, decisions and values, while clearly depicting uncertainties and probabilistic dependencies.
                     However, constructing an influence diagram requires expertise in decision analysis and is further complicated by the need to process large amounts of contextual information.
@@ -183,23 +172,19 @@
                     The dataset and code are available at <a href="https://github.com/lamda-thu/LAMDA">this URL</a>.
                     Furthermore, we extend the framework to aggregate opinions from multiple sources and apply the aggregation method to discussions by groups of disease control experts on a hypothetical pandemic scenario.
                   </p>
-                </div>
-              </details>
+                </details>
+              </div>
             </li>
-            <li>
-              <details>
-                <summary class="talk-summary">
-                  <span class="talk-year">2023</span>
-                  <span class="talk-title">Decision-Making as Categorization</span>
-                </summary>
-                <div class="talk-body">
-                  <p class="talk-meta">Oral presentation · INFORMS Annual Meeting · October 16 · Phoenix, Arizona</p>
-                </div>
-              </details>
+            <li class="talk-entry">
+              <span class="talk-year">2023</span>
+              <div>
+                <h3 class="talk-title">Decision-Making as Categorization</h3>
+                <p class="talk-meta">Oral presentation · INFORMS Annual Meeting · October 16 · Phoenix, Arizona</p>
+              </div>
             </li>
           </ul>
         </section>
-        <section class="service" aria-labelledby="service-heading">
+        <section class="service" id="service" aria-labelledby="service-heading">
           <div class="section-heading">
             <h2 id="service-heading">Service</h2>
           </div>

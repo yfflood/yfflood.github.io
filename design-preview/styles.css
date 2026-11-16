@@ -117,18 +117,96 @@ img {
   margin-inline-start: auto;
 }
 
-.site-header, .site-nav, .site-footer, .profile-contact, .section-heading {
+.site-shell {
+  --section-offset: 4.5rem;
+  width: min(100% - 2rem, var(--content-width, 68rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding-block: 1rem 0.55rem;
+}
+
+.site-nav {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  padding-block: 0.2rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--background);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.44rem 0.55rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover, .site-nav a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.site-nav a:focus-visible {
+  outline-offset: -2px;
+}
+
+#main, #main section[id] {
+  scroll-margin-block-start: var(--section-offset);
+}
+
+@media (min-width: 54rem) {
+  .site-shell {
+    --nav-width: 7.5rem;
+    --nav-gap: clamp(1.75rem, 4vw, 3rem);
+    --section-offset: 1.5rem;
+    display: grid;
+    grid-template-columns: var(--nav-width) minmax(0, 1fr);
+    column-gap: var(--nav-gap);
+    width: min(100% - 3rem, calc(var(--content-width, 68rem) + var(--nav-width) + var(--nav-gap)));
+  }
+
+  .site-header {
+    grid-column: 1 / -1;
+    padding-block: 1.1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-nav {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    inset-block-start: 1.5rem;
+    flex-direction: column;
+    margin-block-start: 1.75rem;
+    border-bottom: 0;
+    border-inline-start: 1px solid var(--line);
+    padding-inline-start: 0.25rem;
+  }
+
+  #main, .site-footer {
+    grid-column: 2;
+  }
+}
+
+.site-footer, .profile-contact, .section-heading {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
 }
 
-.site-header, .site-footer, .section-heading {
+.site-footer, .section-heading {
   justify-content: space-between;
   gap: 0.6rem 1.25rem;
 }
 
-.site-nav, .profile-contact {
+.profile-contact {
   gap: 0.45rem 1.25rem;
 }
 
@@ -169,65 +247,49 @@ img {
   scrollbar-gutter: stable;
 }
 
-.talk-list li + li {
+.talk-entry + .talk-entry {
   border-top: 1px solid var(--line);
 }
 
-.talk-summary {
+.talk-entry {
   display: grid;
-  grid-template-columns: 2.45rem minmax(0, 1fr) auto;
+  grid-template-columns: 2.45rem minmax(0, 1fr);
   align-items: start;
   gap: 0.5rem;
-  padding: 0.85rem var(--talk-padding, 0.5rem);
-  cursor: pointer;
-  list-style: none;
-}
-
-.talk-summary::-webkit-details-marker {
-  display: none;
-}
-
-.talk-summary::after {
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  border: solid var(--accent);
-  border-width: 0 1.5px 1.5px 0;
-  margin: 0.36rem 0.2rem 0 0.15rem;
-  transform: rotate(45deg);
-}
-
-details[open] > .talk-summary::after {
-  margin-top: 0.58rem;
-  transform: rotate(225deg);
-}
-
-.talk-summary:focus-visible {
-  outline-offset: -2px;
+  padding: 0.85rem 0.5rem;
 }
 
 .talk-title {
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.35;
 }
 
-.talk-summary:hover .talk-title {
+.talk-meta {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.talk-disclosure {
+  margin-top: 0.2rem;
+}
+
+.talk-disclosure > summary {
+  width: fit-content;
+  padding: 0.2rem 0.15rem;
   color: var(--accent);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.talk-disclosure > summary:hover {
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
 
-.talk-body {
-  padding: 0 var(--talk-padding, 0.5rem) 1rem;
-  padding-inline-start: calc(var(--talk-padding, 0.5rem) + 2.95rem);
-}
-
-.talk-meta {
-  font-size: 0.875rem;
-}
-
 .talk-abstract {
-  margin-top: 0.65rem;
+  margin-top: 0.35rem;
   font-size: 0.95rem;
 }
 
@@ -243,22 +305,8 @@ details[open] > .talk-summary::after {
 }
 
 [data-design="editorial"] {
-  .site-shell {
-    width: min(100% - 3rem, 68rem);
-    margin-inline: auto;
-  }
-
-  .site-header {
-    padding-block: 1.1rem;
-    border-bottom: 1px solid var(--line);
-  }
-
   .site-name {
     font: 500 1.4rem/1.15 var(--serif);
-  }
-
-  .site-nav {
-    font-size: 0.9rem;
   }
 
   .profile {
@@ -441,10 +489,6 @@ details[open] > .talk-summary::after {
   }
 
   [data-design="editorial"] {
-    .site-shell {
-      width: calc(100% - 2rem);
-    }
-
     h1 {
       font-size: clamp(2.9rem, 13vw, 4rem);
     }

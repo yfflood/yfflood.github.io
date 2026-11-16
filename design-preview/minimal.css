@@ -5,15 +5,9 @@ html[data-design="minimal"] {
   --muted: #535967;
   --line: #e3e5ea;
   --accent: #334887;
-
-  .site-shell {
-    width: min(100% - 3rem, 43rem);
-    margin-inline: auto;
-  }
+  --content-width: 43rem;
 
   .site-header {
-    padding-block: 1rem;
-    border-bottom: 1px solid var(--line);
     font-size: 0.92rem;
   }
 
@@ -21,7 +15,7 @@ html[data-design="minimal"] {
     font-weight: 700;
   }
 
-  .site-nav, .site-footer {
+  .site-footer {
     color: var(--muted);
   }
 
@@ -152,10 +146,6 @@ html[data-design="minimal"] {
   }
 
   @media (max-width: 36rem) {
-    .site-shell {
-      width: calc(100% - 2rem);
-    }
-
     .topic-list li {
       grid-template-columns: minmax(0, 1fr);
     }
